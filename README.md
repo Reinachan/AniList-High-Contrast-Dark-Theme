@@ -1,0 +1,1 @@
+# AniList-High-Contrast-Dark-Theme
