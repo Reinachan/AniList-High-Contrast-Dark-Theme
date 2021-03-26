@@ -1,0 +1,26 @@
+{
+  "name": "anilist-high-contrast-dark-theme",
+  "version": "1.5.0",
+  "description": "High-Contrast Dark-Theme for AniList",
+  "main": "converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions"
+  ],
+  "author": "Reina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/issues"
+  },
+  "homepage": "https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  }
+}
