@@ -3,7 +3,7 @@
 @description  Adjusts the dark-theme to have higher contrast and more tweaks.
 @author       Reina
 @supportURL   https://anilist.co/user/Reina/
-@version      1.5.0
+@version      1.5.1
 @license      MIT
 @preprocessor less
 @namespace https://greasyfork.org/users/703350
@@ -73,7 +73,7 @@
     --color-blue-1000: 16, 61, 85;
   }
   /* Small screens adjustment */
-  .page-content > .container {
+  .page-content > .container, .page-content > .user > .container {
     @media screen and (max-width: 600px) {
       padding-left: 2px;
       padding-right: 2px;
@@ -121,16 +121,14 @@
   /* Activity Textareas */
   .activity-edit {
     .input.el-textarea {
-      
       /* Add bottom padding only in Firefox as other browsers
       displays this correctly already */
-      @media all and (min--moz-device-pixel-ratio:0) {
+      @media all and (min--moz-device-pixel-ratio: 0) {
         padding-bottom: 5px;
       }
-      
       textarea {
         box-shadow: none;
-        //overflow: visible;
+        overflow: hidden;
         transition: height 0.1s;
         will-change: height;
       }
@@ -439,12 +437,19 @@
       border-left: 7px solid rgba(var(--color-foreground-grey-dark));
     }
   }
-  /* Database Tools */
+  /* ------ Database Tools ------ */
   .media.container {
     @media screen and (max-width: 800px) {
       grid-template-columns: auto;
       gap: 20px;
       min-width: 250px;
+      
+      /* Popup modal */
+      .el-dialog__wrapper.dialog .el-dialog {
+        width: 98%;
+      }
+      
+      /* Navigation tabs */
       .pages {
         grid-column: 1;
         grid-row: 1;
@@ -454,6 +459,8 @@
         grid-row: 2;
       }
     }
+    
+    /* General form inputs */
     .submission-form {
       .col-2 {
         gap: 0 10px;
@@ -468,6 +475,55 @@
           gap: 10px;
           grid-template-columns: repeat( auto-fit, minmax(180px, 250px));
         }
+      }
+    } 
+    
+    /* Character page */
+    .character-row {
+      grid-template-columns: 1fr 1.3fr .1fr;
+      
+      @media screen and (min-width: 1000px) {
+        grid-template-columns: .6fr 1.3fr .1fr;
+      }
+      
+      @media screen and (max-width: 450px) {
+        grid-template-columns: auto auto 40px;
+        grid-template-rows: auto;
+        gap: 10px;
+        .character.col {
+          grid-row: 1;
+        }
+        .actor.col {
+          grid-row: 2;
+        }
+        .actions {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+      }
+    }
+    
+    /* Images */
+    .images .submission-form {
+      @media screen and (min-width: 550px) {
+        &:first-of-type {
+          display: grid;
+          grid-template-columns: min-content;
+          
+          .el-input {
+            grid-column: 2;
+            grid-row: 1;
+          }
+          .cover {
+            margin-right: 15px;
+            grid-column: 1;
+            grid-row: 1;
+          } 
+        }
+      }
+      
+      .cover.banner {
+        width: 100%;
       }
     }
   }

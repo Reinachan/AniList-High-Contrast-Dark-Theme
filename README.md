@@ -1,22 +1,20 @@
 # AniList High-Contrast Dark-Theme
 
-*Changelog at the bottom*
+Major overhaul to the default dark-theme on AniList to improve accessibility for visual impairments where increased contrast is helpful but dark themes still preferred.
 
-I did a major overhaul to the default dark-theme on AniList to improve accessibility for visual impairments where increased contrast is helpful but where dark themes are preferred.
-
-![](https://i.imgur.com/c9hojWc.png)
-
-![](https://i.imgur.com/37QSkJe.png)
-
-![](https://i.imgur.com/wBhBWpO.png)
+![Profile Page](https://i.imgur.com/c9hojWc.png)
+![Activity Feed](https://i.imgur.com/37QSkJe.png)
+![Submission Manual](https://i.imgur.com/wBhBWpO.png)
 
 ## Known Issues
+
 - The GraphiQL interactive editor is still light-themed.
 - I want to increase font-sizes to make it more accessible. This theme is accessibility-focused in general.
 
 If any of these issues are really annoying to you, message me on my profile https://anilist.co/user/Reina/
 
 ## Changelog
+
 1.0.0 - Released <br>
 1.0.1 - Fixed navbar not disappearing when scrolling <br>
 
@@ -37,3 +35,4 @@ If any of these issues are really annoying to you, message me on my profile http
 1.4.1 - Fixed an unintentional text alignment issue with the edit post dropdown. <br>
 
 1.5.0 - Database tools are now usable on small screens and viewports. <br>
+1.5.1 - Improved modals, character page, and images in the database tools on small screens. <br>
