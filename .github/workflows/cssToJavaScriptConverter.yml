@@ -27,14 +27,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.15'
-          path: ./
       - run: npm ci
       - run: npm install -g less
-      - run: lessc style/theme.less gen/theme.css 
+
+      - name: Generate css file
+      - run: lessc style/theme.less gen/theme.css
+
+      - name: Generate userCSS file
       - run: cat style/metadata.css > High-Contrast-Dark-Theme.user.css
       - run: cat style/theme.less >> High-Contrast-Dark-Theme.user.css
+
+      - name: Generate bookmarklet
       - run: node util/converter.js
 
+      - name: Commit generated files to repository
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Auto-generate userstyle and bookmarklet
+          push_options: '--force'
