@@ -375,7 +375,16 @@
   }
   /* no-mobile-end */
   /* Like heart */
-  .button .fa-heart {
+  .action.likes .button,
+  .like-wrap.thread_comment .button {
+    color: rgb(var(--color-blue-dim));
+  }
+  .action.likes .button:hover,
+  .like-wrap.thread_comment .button:hover {
+    color: rgb(var(--color-blue));
+  }
+  .action.likes .button .fa-heart,
+  .like-wrap.thread_comment .button .fa-heart {
     color: #0000;
     stroke: rgb(var(--color-blue-dim));
     stroke-width: 70;
@@ -384,13 +393,34 @@
     padding-bottom: 0.08em;
     padding-top: 0.05em;
   }
-  .button.liked .fa-heart {
+  .action.likes .button .fa-heart:hover,
+  .like-wrap.thread_comment .button .fa-heart:hover {
+    stroke: rgb(var(--color-blue));
+  }
+  .action.likes .button.liked,
+  .like-wrap.thread_comment .button.liked {
     color: rgb(var(--color-red));
+  }
+  .action.likes .button.liked:hover,
+  .like-wrap.thread_comment .button.liked:hover {
+    color: rgb(var(--color-blue-dim));
+  }
+  .action.likes .button.liked:hover .fa-heart,
+  .like-wrap.thread_comment .button.liked:hover .fa-heart {
+    color: rgb(var(--color-blue-dim));
+  }
+  .action.likes .button.liked .fa-heart,
+  .like-wrap.thread_comment .button.liked .fa-heart {
+    color: var(--color-red);
     stroke: rgba(0, 0, 0, 0);
     stroke-width: 0;
     font-size: 0.875em;
     padding-bottom: 0;
     padding-top: 0;
+  }
+  .action.likes .button.liked .fa-heart:hover,
+  .like-wrap.thread_comment .button.liked .fa-heart:hover {
+    color: rgb(var(--color-blue-dim));
   }
   /* Scrollbar */
   * {
