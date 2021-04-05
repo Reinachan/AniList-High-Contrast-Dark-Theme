@@ -447,6 +447,24 @@
     }
   }
   /* ------ Database Tools ------ */
+  /* Enable edit button on mobile */
+  @media screen and (max-width: 760px) {
+    .media.media-page-unscoped .sidebar {
+      display: grid;
+      gap: 20px;
+      
+      .review.button.edit {
+        grid-row: 1;
+        
+        display: flex;
+        
+        span::after {
+          content: ' Database Entry'
+        }
+      }
+    }
+  }
+
   .media.container {
     @media screen and (max-width: 800px) {
       grid-template-columns: auto;

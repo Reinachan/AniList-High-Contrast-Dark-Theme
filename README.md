@@ -47,3 +47,4 @@ If any of these issues are really annoying to you, message me on my profile http
 1.5.1 - Improved modals, character page, and images in the database tools on small screens. <br>
 1.5.2 - Updated metadata as I now host the userstyle on [Github](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme). <br>
 1.5.3 - Fixed semi-transparent navbar. Now it actually appears semi-transparent. <br>
+1.5.4 - Enabled database edit button on mobile. <br>
