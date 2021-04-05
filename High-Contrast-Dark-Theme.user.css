@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.5.2
+@version      1.5.3
 @license      MIT
 @preprocessor less
 ==/UserStyle== *//* no-mobile-start */
@@ -38,10 +38,6 @@
     --color-blue-800: 12, 101, 166;
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
-  }
-  #nav {
-    background: rgb(20, 25, 31);
-    color: #eaeeff!important;
   }
   .site-theme-dark {
     --color-blue: 120, 180, 255;
@@ -75,6 +71,23 @@
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
   }
+
+  /* Navbar */
+  #app {
+    .nav-unscoped {
+      background: rgb(20, 25, 31);
+      color: #eaeeff;
+      &.transparent {
+        background: rgba(20, 25, 31, 0.5);
+        color: #eaeeff;
+        &:hover {
+          background: rgb(20, 25, 31);
+          color: #eaeeff;
+        }
+      }
+    }
+  }
+
   /* Small screens adjustment */
   .page-content > .container, .page-content > .user > .container {
     @media screen and (max-width: 600px) {
