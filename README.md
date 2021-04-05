@@ -8,7 +8,9 @@ If you're on a computer or on Android, you can install it directly from [GitHub]
 
 If you're on Android, you can add it through the same method as above, just use a browser that supports plugins. [Kiwi Browser](https://kiwibrowser.com/) and [Yandex Browser](https://browser.yandex.com/mobile/) both support Chrome plugins.
 
-If you're on mobile, you can add it as a bookmarklet by making a bookmark with the content of [this](https://raw.githubusercontent.com/Reinachan/AniList-High-Contrast-Dark-Theme/main/High-Contrast-Dark-Theme.bookmarklet.js) file. Sadly, for security reasons, I can't have this one auto-update. This means you'll have to update it manually as I add new features. I announce them over on [AniList](https://anilist.co/user/Reina/) in case you don't use GitHub actively.
+If you're on iOS (or don't want to use Yandex or Kiwi), you can add it as a bookmarklet by making a bookmark with the content of [this](https://raw.githubusercontent.com/Reinachan/AniList-High-Contrast-Dark-Theme/main/High-Contrast-Dark-Theme.bookmarklet.js) file as the URL. You'll have to apply this every time you open or reload AniList for it to work. Sadly, for security reasons, I can't have this one auto-update. This means you'll have to update it manually as I add new features. I announce them over on [AniList](https://anilist.co/user/Reina/) in case you don't use GitHub actively.
+
+## Screenshots
 
 ![Profile Page](https://i.imgur.com/c9hojWc.png)
 <img width="49.5%" src="https://i.imgur.com/37QSkJe.png" alt="activity feed"><img width="49.5%" src="https://i.imgur.com/wBhBWpO.png" alt="Submission Manual" align="right">
