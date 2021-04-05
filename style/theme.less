@@ -363,8 +363,13 @@
   /* no-mobile-end */
 
   /* Like heart */
-  .button {
-    .fa-heart {
+  .action.likes .button, .like-wrap.thread_comment .button {
+    color: rgb(var(--color-blue-dim));
+    &:hover {
+        color: rgb(var(--color-blue));
+      }
+    
+    .fa-heart {  
       color: #0000;
       stroke: rgb(var(--color-blue-dim));
       stroke-width: 70;
@@ -372,15 +377,31 @@
       font-size: 0.870em;
       padding-bottom: 0.08em;
       padding-top: 0.05em;
+      
+      &:hover {
+        stroke: rgb(var(--color-blue));
+      }
     }
     &.liked {
+      color: rgb(var(--color-red));
+      &:hover {
+        color: rgb(var(--color-blue-dim));
+        
+        .fa-heart {
+          color: rgb(var(--color-blue-dim));
+        }
+      }
       .fa-heart {
-        color: rgb(var(--color-red));
+        color: var(--color-red);
         stroke: rgba(0, 0, 0, 0);
         stroke-width: 0;
         font-size: 0.875em;
         padding-bottom: 0;
         padding-top: 0;
+        
+        &:hover {
+          color: rgb(var(--color-blue-dim));
+        }
       }
     }
   }
