@@ -28,10 +28,6 @@
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
   }
-  #nav {
-    background: rgb(20, 25, 31);
-    color: #eaeeff!important;
-  }
   .site-theme-dark {
     --color-blue: 120, 180, 255;
     --color-shadow-blue: 8, 10, 16, 0.5;
@@ -64,6 +60,23 @@
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
   }
+
+  /* Navbar */
+  #app {
+    .nav-unscoped {
+      background: rgb(20, 25, 31);
+      color: #eaeeff;
+      &.transparent {
+        background: rgba(20, 25, 31, 0.5);
+        color: #eaeeff;
+        &:hover {
+          background: rgb(20, 25, 31);
+          color: #eaeeff;
+        }
+      }
+    }
+  }
+
   /* Small screens adjustment */
   .page-content > .container, .page-content > .user > .container {
     @media screen and (max-width: 600px) {

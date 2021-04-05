@@ -45,5 +45,6 @@ jobs:
       - name: Commit generated files to repository
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          branch: main
           commit_message: Auto-generate userstyle and bookmarklet
           push_options: '--force'
