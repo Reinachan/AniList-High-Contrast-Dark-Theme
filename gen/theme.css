@@ -28,10 +28,6 @@
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
   }
-  #nav {
-    background: #14191f;
-    color: #eaeeff !important;
-  }
   .site-theme-dark {
     --color-blue: 120, 180, 255;
     --color-shadow-blue: 8, 10, 16, 0.5;
@@ -63,6 +59,19 @@
     --color-blue-800: 12, 101, 166;
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
+  }
+  /* Navbar */
+  #app .nav-unscoped {
+    background: #14191f;
+    color: #eaeeff;
+  }
+  #app .nav-unscoped.transparent {
+    background: rgba(20, 25, 31, 0.5);
+    color: #eaeeff;
+  }
+  #app .nav-unscoped.transparent:hover {
+    background: #14191f;
+    color: #eaeeff;
   }
   /* Small screens adjustment */
   @media screen and (max-width: 600px) {
