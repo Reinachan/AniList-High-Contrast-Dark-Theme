@@ -454,6 +454,20 @@
     border-left: 7px solid rgba(var(--color-foreground-grey-dark));
   }
   /* ------ Database Tools ------ */
+  /* Enable edit button on mobile */
+  @media screen and (max-width: 760px) {
+    .media.media-page-unscoped .sidebar {
+      display: grid;
+      gap: 20px;
+    }
+    .media.media-page-unscoped .sidebar .review.button.edit {
+      grid-row: 1;
+      display: flex;
+    }
+    .media.media-page-unscoped .sidebar .review.button.edit span::after {
+      content: ' Database Entry';
+    }
+  }
   .media.container {
     /* General form inputs */
     /* Character page */
