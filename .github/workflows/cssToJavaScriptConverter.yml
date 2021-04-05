@@ -31,8 +31,10 @@ jobs:
       - run: npm ci
       - run: npm install -g less
       - run: lessc style/theme.less gen/theme.css 
-      - run: cat style/metadata > High-Contrast-Dark-Theme.user.css
+      - run: cat style/metadata.css > High-Contrast-Dark-Theme.user.css
       - run: cat style/theme.less >> High-Contrast-Dark-Theme.user.css
       - run: node util/converter.js
 
       - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Auto-generate userstyle and bookmarklet
