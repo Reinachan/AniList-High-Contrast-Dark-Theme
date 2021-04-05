@@ -29,6 +29,7 @@ jobs:
           node-version: '14.15'
           path: ./
       - run: npm ci
+      - run: npm install -g less
       - run: lessc style/theme.less gen/theme.css 
       - run: cat style/metadata > High-Contrast-Dark-Theme.user.css
       - run: cat style/theme.less >> High-Contrast-Dark-Theme.user.css

@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "less": "^4.1.1"
+    "@actions/core": "^1.2.6"
   }
 }
