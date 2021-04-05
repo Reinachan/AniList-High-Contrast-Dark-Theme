@@ -73,7 +73,7 @@ addStyleString(
     --color-blue-1000: 16, 61, 85;
   }
   
-  .page-content > .container {
+  .page-content > .container, .page-content > .user > .container {
     @media screen and (max-width: 600px) {
       padding-left: 2px;
       padding-right: 2px;
@@ -122,14 +122,12 @@ addStyleString(
   .activity-edit {
     .input.el-textarea {
       
-      
-      @media all and (min--moz-device-pixel-ratio:0) {
+      @media all and (min--moz-device-pixel-ratio: 0) {
         padding-bottom: 5px;
       }
-      
       textarea {
         box-shadow: none;
-        
+        overflow: hidden;
         transition: height 0.1s;
         will-change: height;
       }
@@ -444,6 +442,13 @@ addStyleString(
       grid-template-columns: auto;
       gap: 20px;
       min-width: 250px;
+      
+      
+      .el-dialog__wrapper.dialog .el-dialog {
+        width: 98%;
+      }
+      
+      
       .pages {
         grid-column: 1;
         grid-row: 1;
@@ -453,6 +458,8 @@ addStyleString(
         grid-row: 2;
       }
     }
+    
+    
     .submission-form {
       .col-2 {
         gap: 0 10px;
@@ -467,6 +474,55 @@ addStyleString(
           gap: 10px;
           grid-template-columns: repeat( auto-fit, minmax(180px, 250px));
         }
+      }
+    } 
+    
+    
+    .character-row {
+      grid-template-columns: 1fr 1.3fr .1fr;
+      
+      @media screen and (min-width: 1000px) {
+        grid-template-columns: .6fr 1.3fr .1fr;
+      }
+      
+      @media screen and (max-width: 450px) {
+        grid-template-columns: auto auto 40px;
+        grid-template-rows: auto;
+        gap: 10px;
+        .character.col {
+          grid-row: 1;
+        }
+        .actor.col {
+          grid-row: 2;
+        }
+        .actions {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+      }
+    }
+    
+    
+    .images .submission-form {
+      @media screen and (min-width: 550px) {
+        &:first-of-type {
+          display: grid;
+          grid-template-columns: min-content;
+          
+          .el-input {
+            grid-column: 2;
+            grid-row: 1;
+          }
+          .cover {
+            margin-right: 15px;
+            grid-column: 1;
+            grid-row: 1;
+          } 
+        }
+      }
+      
+      .cover.banner {
+        width: 100%;
       }
     }
   }
