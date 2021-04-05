@@ -1,12 +1,14 @@
 /* ==UserStyle==
 @name         AniList High-Contrast Dark-Theme
-@description  Adjusts the dark-theme to have higher contrast and more tweaks.
+@description  Adjusts the dark-theme to have higher contrast and some other tweaks.
 @author       Reina
+@namespace    https://github.com/Reinachan
+@homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
-@version      1.5.1
+@updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
+@version      1.5.2
 @license      MIT
 @preprocessor less
-@namespace    https://greasyfork.org/users/703350
 ==/UserStyle== *//* no-mobile-start */
 @-moz-document domain("anilist.co") {
 /* no-mobile-end */
