@@ -406,6 +406,21 @@
     }
   }
 
+  /* forum thread like heart */
+  .like-wrap.thread .button {
+    .fa-heart {
+      color: #0000;
+      stroke: rgb(var(--color-white));
+      stroke-width: 70;
+    }
+    &.liked {
+      .fa-heart {
+        color: rgb(var(--color-white)) !important;
+        stroke: rgba(0,0,0,0) !important;
+      }
+    }
+  }
+
   /* Scrollbar */
   * {
     scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, 0);
