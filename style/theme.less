@@ -406,14 +406,14 @@
     }
   }
 
-  /* forum thread like heart */
-  .like-wrap.thread .button {
+  /* forum thread, favourite like heart */
+  .like-wrap.thread .button, .actions .favourite {
     .fa-heart {
       color: #0000;
       stroke: rgb(var(--color-white));
       stroke-width: 70;
     }
-    &.liked {
+    &.liked, &.isFavourite {
       .fa-heart {
         color: rgb(var(--color-white)) !important;
         stroke: rgba(0,0,0,0) !important;
