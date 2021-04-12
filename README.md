@@ -49,3 +49,5 @@ If any of these issues are really annoying to you, message me on my profile http
 1.5.3 - Fixed semi-transparent navbar. Now it actually appears semi-transparent. <br>
 1.5.4 - Enabled database edit button on mobile. <br>
 1.5.5 - improved like hearts with hover effects. <br>
+
+1.6.0 - Dark-themed AniChart and styled some more aspects of Automail. <br>

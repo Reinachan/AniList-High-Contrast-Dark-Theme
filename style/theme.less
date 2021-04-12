@@ -1,5 +1,5 @@
 /* no-mobile-start */
-@-moz-document domain("anilist.co") {
+@-moz-document domain("anilist.co"), domain("anichart.net") {
 /* no-mobile-end */
   :root {
     --color-background: 14, 18, 22;
@@ -75,6 +75,14 @@
         }
       }
     }
+  }
+  
+  .nav[data-v-e2f25004] {
+    background: #181a32;
+  }
+  
+  .banner-image[data-v-e2f25004] {
+    filter: grayscale(50%);
   }
 
   /* Small screens adjustment */
@@ -359,7 +367,30 @@
     box-shadow: none;
     padding-right: 10px;
     padding-left: 15px;
-  } 
+  }
+  // Hoh "Add progress bars to the list previews"
+  .info.hasMeter {
+    position: absolute!important;
+    width: 100%;
+    left: 0!important;
+    bottom: 0!important;
+    padding: 12px;
+    
+    meter { 
+      border-radius: 4px;
+      width: 100%;
+      height: 5px;
+      &::-moz-meter-bar {
+        border-radius: 4px;
+      }
+    }
+  }
+  // Hoh styling "Colour code the right border of activities by media status"
+  .activity-entry {
+    border-radius: 4px;
+    margin-right: 0!important;
+  }
+  
   /* no-mobile-end */
 
   /* Like heart */
@@ -408,7 +439,7 @@
 
   /* Scrollbar */
   * {
-    scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, 0);
+    scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, .2);
     scrollbar-width: thin;
   }
   ::-webkit-scrollbar {
