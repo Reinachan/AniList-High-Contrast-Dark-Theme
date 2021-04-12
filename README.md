@@ -13,7 +13,7 @@ If you're on iOS (or don't want to use Yandex or Kiwi), you can add it as a book
 ## Screenshots
 
 ![Profile Page](https://i.imgur.com/c9hojWc.png)
-<img width="49.5%" src="https://i.imgur.com/37QSkJe.png" alt="activity feed"><img width="0.5%" height="0" alt=""><img width="49.5%" src="https://i.imgur.com/wBhBWpO.png" alt="Submission Manual">
+<img width="49.8%" src="https://i.imgur.com/37QSkJe.png" alt="activity feed"><img width="0.4%" height="0" alt=""><img width="49.8%" src="https://i.imgur.com/wBhBWpO.png" alt="Submission Manual">
 
 ## Known Issues
 
