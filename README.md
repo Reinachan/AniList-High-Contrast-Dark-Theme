@@ -14,6 +14,8 @@ If you're on iOS (or don't want to use Yandex or Kiwi), you can add it as a book
 
 ![Profile Page](https://i.imgur.com/c9hojWc.png)
 <img width="49.8%" src="https://i.imgur.com/37QSkJe.png" alt="activity feed"><img width="0.4%" height="0" alt=""><img width="49.8%" src="https://i.imgur.com/wBhBWpO.png" alt="Submission Manual">
+![AniChart](https://user-images.githubusercontent.com/16106839/114465894-0bf11900-9be8-11eb-886e-c39b23d5fdc8.png)
+
 
 ## Known Issues
 
