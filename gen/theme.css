@@ -501,6 +501,12 @@
     overflow-y: scroll!important;
     scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, 0);
   }
+  .list-editor .custom-lists {
+    overflow-y: auto;
+  }
+  .list-editor .custom-lists:hover {
+    margin-right: 0;
+  }
   /* Forum */
   .comment-wrap {
     border-left: 7px solid rgba(var(--color-foreground-blue));
