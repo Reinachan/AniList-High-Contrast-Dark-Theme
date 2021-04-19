@@ -109,19 +109,33 @@
       border-bottom-color: rgb(var(--color-foreground-grey-dark));
     }
   }
+  .el-dropdown-menu.el-popper.activity-extras-dropdown {
+    &[x-placement^="top"] .popper__arrow::after {
+      bottom: 0;
+    }
+    &[x-placement^="bottom"] {
+      transform: translateY(25px);
+      
+      .popper__arrow {
+        top: -5px;
+      }
+    }
+  }
+  
   /* Dropdown menu */
   .el-dropdown-menu.el-popper {
     text-align: center;
-    background-color: rgb(var(--color-foreground-grey-dark))!important;
+    background-color: rgb(var(--color-foreground-grey-dark));
     box-shadow: 0 1px 10px 0 rgba(var(--color-shadow-blue));
     &.el-dropdown-menu--medium {
       width: 150px;
+      
       &.activity-extras-dropdown {
         text-align: left;
       }
-    }
-    .el-dropdown-menu__item:hover {
-      background-color: rgb(var(--color-foreground-alt))!important;
+      .el-dropdown-menu__item:hover {
+        background-color: rgb(var(--color-foreground-alt))!important;
+      }
     }
     .el-dropdown-menu__item--divided {
       border-top: 3px solid rgb(var(--color-foreground-alt));
@@ -142,6 +156,7 @@
   .el-select-dropdown__item:hover {
     background-color: rgb(var(--color-background))!important;
   }
+  
   /* Activity Textareas */
   .activity-edit {
     .input.el-textarea {
