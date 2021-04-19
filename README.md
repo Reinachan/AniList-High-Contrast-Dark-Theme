@@ -54,3 +54,4 @@ If any of these issues are really annoying to you, message me on my profile http
 
 1.6.0 - Dark-themed AniChart and styled some more aspects of Automail. <br>
 1.6.1 - Fixed the scrollbar issue when you hover over custom lists that overflow. <br>
+1.6.2 - Merged minor tweaks from PR's by @synthtech. <br>
