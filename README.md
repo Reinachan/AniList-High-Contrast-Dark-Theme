@@ -20,7 +20,6 @@ If you're on iOS (or don't want to use Yandex or Kiwi), you can add it as a book
 ## Known Issues
 
 - The GraphiQL interactive editor is still light-themed.
-- I want to increase font-sizes to make it more accessible. This theme is accessibility-focused in general.
 
 If any of these issues are really annoying to you, message me on my profile https://anilist.co/user/Reina/
 
