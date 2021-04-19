@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.6.1
+@version      1.6.2
 @license      MIT
 @preprocessor less
 ==/UserStyle== *//* no-mobile-start */
@@ -38,6 +38,18 @@
     --color-blue-800: 12, 101, 166;
     --color-blue-900: 11, 70, 113;
     --color-blue-1000: 16, 61, 85;
+    --color-gray-1200: 251,251,251;
+    --color-gray-1100: 240,243,246;
+    --color-gray-1000: 221,230,238;
+    --color-gray-900: 201,215,227;
+    --color-gray-800: 173,192,210;
+    --color-gray-700: 139,160,178;
+    --color-gray-600: 116,136,153;
+    --color-gray-500: 100,115,128;
+    --color-gray-400: 81,97,112;
+    --color-gray-300: 30,42,56;
+    --color-gray-100: 21,31,46;
+    --color-gray-200: 11,22,34;
   }
   .site-theme-dark {
     --color-blue: 120, 180, 255;
@@ -85,6 +97,9 @@
           color: #eaeeff;
         }
       }
+      .dropdown::before {
+        border-bottom-color: rgb(var(--color-background-100));
+      }
     }
   }
   
@@ -110,26 +125,56 @@
   .site-theme-dark .user-page-unscoped.pink {
     --color-blue: 252, 157, 214;
   }
-  /* Dropdown menu */
-  .el-dropdown-menu.el-popper.el-dropdown-menu--medium {
-    width: 150px;
-    text-align: center;
-    background-color: rgb(var(--color-foreground-grey-dark))!important;
-    box-shadow: 0 1px 10px 0 rgba(var(--color-shadow-blue));
-    .el-dropdown-menu__item:hover {
-      background-color: rgb(var(--color-foreground-alt))!important;
+  /* Dropdown menu arrows */
+  .el-dropdown-menu.el-popper,
+  .el-select-dropdown.el-popper {
+    &[x-placement^="top"] .popper__arrow::after {
+      bottom: 0;
     }
-    .el-dropdown-menu__item--divided {
-      border-top: 3px solid rgb(var(--color-foreground-alt));
-      width: 90%;
-      margin: auto;
-      &:before {
-        background-color: rgb(var(--color-foreground-grey-dark))!important;
+    &[x-placement^="bottom"] .popper__arrow::after {
+      top: 0;
+    }
+    .popper__arrow,
+    .popper__arrow::after {
+      border-top-color: rgb(var(--color-foreground-grey-dark));
+      border-bottom-color: rgb(var(--color-foreground-grey-dark));
+    }
+  }
+  .el-dropdown-menu.el-popper.activity-extras-dropdown {
+    &[x-placement^="top"] .popper__arrow::after {
+      bottom: 0;
+    }
+    &[x-placement^="bottom"] {
+      transform: translateY(25px);
+      
+      .popper__arrow {
+        top: -5px;
       }
     }
   }
-  .el-dropdown-menu.el-popper.el-dropdown-menu--medium.activity-extras-dropdown {
-    text-align: left;
+  
+  /* Dropdown menu */
+  .el-dropdown-menu.el-popper {
+    text-align: center;
+    background-color: rgb(var(--color-foreground-grey-dark));
+    box-shadow: 0 1px 10px 0 rgba(var(--color-shadow-blue));
+    &.el-dropdown-menu--medium {
+      width: 150px;
+      
+      &.activity-extras-dropdown {
+        text-align: left;
+      }
+      .el-dropdown-menu__item:hover {
+        background-color: rgb(var(--color-foreground-alt))!important;
+      }
+    }
+    .el-dropdown-menu__item--divided {
+      border-top: 3px solid rgb(var(--color-foreground-alt));
+      margin: auto;
+      &::before {
+        background-color: rgb(var(--color-foreground-grey-dark))!important;
+      }
+    }
   }
   /* List editor dropdown menu */
   .el-select-dropdown.el-popper {
@@ -142,6 +187,7 @@
   .el-select-dropdown__item:hover {
     background-color: rgb(var(--color-background))!important;
   }
+  
   /* Activity Textareas */
   .activity-edit {
     .input.el-textarea {
@@ -448,6 +494,21 @@
     }
   }
 
+  /* forum thread, favourite like heart */
+  .like-wrap.thread .button, .actions .favourite {
+    .fa-heart {
+      color: #0000;
+      stroke: rgb(var(--color-white));
+      stroke-width: 70;
+    }
+    &.liked, &.isFavourite {
+      .fa-heart {
+        color: rgb(var(--color-white)) !important;
+        stroke: rgba(0,0,0,0) !important;
+      }
+    }
+  }
+
   /* Scrollbar */
   * {
     scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, .2);
@@ -515,6 +576,21 @@
       border-left: 7px solid rgba(var(--color-foreground-grey-dark));
     }
   }
+  /* Staff/character page header */
+  .character-wrap .header, .staff-wrap .header {
+    background: rgb(var(--color-foreground));
+    
+    .name {
+      color: rgb(var(--color-gray-900));
+    }
+    .name-alt {
+      color: rgb(var(--color-gray-800));
+    }
+    .edit {
+      color: rgb(var(--color-gray-800));
+    }
+  }
+  
   /* ------ Database Tools ------ */
   /* Enable edit button on mobile */
   @media screen and (max-width: 760px) {
