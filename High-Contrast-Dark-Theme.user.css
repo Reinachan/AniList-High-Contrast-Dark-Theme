@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.6.2
+@version      1.6.3
 @license      MIT
 @preprocessor less
 ==/UserStyle== *//* no-mobile-start */
@@ -189,21 +189,14 @@
   }
   
   /* Activity Textareas */
-  .activity-edit {
-    .input.el-textarea {
-      /* Add bottom padding only in Firefox as other browsers
-      displays this correctly already */
-      @media all and (min--moz-device-pixel-ratio: 0) {
-        padding-bottom: 5px;
-      }
-      textarea {
-        box-shadow: none;
-        overflow: hidden;
-        transition: height 0.1s;
-        will-change: height;
-      }
-    }
+  .activity-edit .input.el-textarea textarea {
+    box-shadow: none;
+
+    // Set the transition speed to 0s so as to not have a scrollbar appear every time you press "enter".
+    will-change: height;
+    transition: height 0s;
   }
+  
   /* Activity Feed Sort */
   .feed-select,
   .section-header {
@@ -563,12 +556,22 @@
       scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, 0);
     }
   }
+
+  // Add spacing at the bottom of bios as some of them almost cut off currently
+  .about .content-wrap .markdown::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+  }
+
   .list-editor .custom-lists {
     overflow-y: auto;
     &:hover {
       margin-right: 0;
     }
   }
+
   /* Forum */
   .comment-wrap {
     border-left: 7px solid rgba(var(--color-foreground-blue));

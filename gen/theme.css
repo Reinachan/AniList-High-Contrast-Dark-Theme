@@ -168,20 +168,10 @@
     background-color: rgb(var(--color-background)) !important;
   }
   /* Activity Textareas */
-  .activity-edit .input.el-textarea {
-    /* Add bottom padding only in Firefox as other browsers
-      displays this correctly already */
-  }
-  @media all and (min--moz-device-pixel-ratio: 0) {
-    .activity-edit .input.el-textarea {
-      padding-bottom: 5px;
-    }
-  }
   .activity-edit .input.el-textarea textarea {
     box-shadow: none;
-    overflow: hidden;
-    transition: height 0.1s;
     will-change: height;
+    transition: height 0s;
   }
   /* Activity Feed Sort */
   .feed-select .el-dropdown,
@@ -555,6 +545,12 @@
   .about .content-wrap:hover {
     overflow-y: scroll!important;
     scrollbar-color: rgb(var(--color-blue)) rgba(0, 0, 0, 0);
+  }
+  .about .content-wrap .markdown::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
   }
   .list-editor .custom-lists {
     overflow-y: auto;
