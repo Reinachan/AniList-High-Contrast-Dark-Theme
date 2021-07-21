@@ -55,3 +55,4 @@ If any of these issues are really annoying to you, message me on my profile http
 1.6.2 - Merged minor tweaks from PR's by @synthtech. <br>
 1.6.3 - Refinements. Gave comment/post composer back the scrollbar as my hack sometimes made it hard to reach content. Removed height-change animation to remove the appearing and disappearing scrollbar. Added spacing to the bottom of bios to prevent content from almost overflowing. <br>
 1.6.4 - Changed the colour when hovering over a liked heart. It becoming blue when hovering previous was a bit confusing, especially as it stayed blue when clicking like in the first place. <br>
+1.6.5 - Added the stuff I forgot in the previous version making it actually work. <br>
