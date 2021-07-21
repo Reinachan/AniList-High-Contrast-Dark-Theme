@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.6.4
+@version      1.6.5
 @license      MIT
 @preprocessor less
 ==/UserStyle== */
@@ -470,10 +470,10 @@
 			color: rgb(var(--color-red));
 			&:hover {
 				--color-red: 246, 124, 144;
-				color: rgb(var(--color-blue-dim));
+				color: rgb(var(--color-red));
 
 				.fa-heart {
-					color: rgb(var(--color-blue-dim));
+					color: rgb(var(--color-red));
 				}
 			}
 			.fa-heart {
@@ -485,7 +485,7 @@
 				padding-top: 0;
 
 				&:hover {
-					color: rgb(var(--color-blue-dim));
+					color: rgb(var(--color-red));
 				}
 			}
 		}
