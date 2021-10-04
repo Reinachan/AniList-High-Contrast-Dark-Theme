@@ -94,12 +94,114 @@
   .banner-image[data-v-e2f25004] {
     filter: grayscale(50%);
   }
-  /* Small screens adjustment */
-  @media screen and (max-width: 600px) {
+  /* Mobile and small screens adjustments */
+  @media screen and (max-width: 760px) {
     .page-content > .container,
     .page-content > .user > .container {
       padding-left: 2px;
       padding-right: 2px;
+    }
+  }
+  /* Increase font size */
+  @media screen and (max-width: 760px) {
+    html {
+      font-size: 11px;
+    }
+  }
+  /* Enable edit button and tags on mobile */
+  @media screen and (max-width: 760px) {
+    .media.media-page-unscoped .sidebar {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .media.media-page-unscoped .sidebar .review.button.edit {
+      grid-row: 1;
+      display: flex;
+    }
+    .media.media-page-unscoped .sidebar .review.button.edit span::after {
+      content: ' Database Entry';
+    }
+    .media.media-page-unscoped .sidebar .data {
+      margin-bottom: 0;
+    }
+    .media.media-page-unscoped .sidebar .tags {
+      grid-row: 3;
+      grid-column: 1;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .media.media-page-unscoped .sidebar .rankings {
+      grid-row: 4;
+      grid-column: 1;
+      display: grid;
+      gap: 10px;
+    }
+    .media.media-page-unscoped .sidebar .rankings .ranking {
+      margin-bottom: 0;
+    }
+    .media.media-page-unscoped .sidebar .rankings .ranking.rated {
+      grid-column: 1;
+    }
+    .media.media-page-unscoped .sidebar .rankings .ranking.popular {
+      grid-column: 2;
+    }
+    .media.media-page-unscoped .sidebar .external-links {
+      grid-row: 5;
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .media.media-page-unscoped .sidebar .rankings .ranking.rated {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .media.media-page-unscoped .sidebar .rankings .ranking.popular {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+  /* Profile page mobile edits */
+  @media screen and (max-width: 760px) {
+    .user.user-page-unscoped .overview .section .about {
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 1040px) {
+    .tooltip {
+      display: none !important;
+    }
+    .user.user-page-unscoped .overview .desktop {
+      display: grid;
+    }
+    .user.user-page-unscoped .overview .desktop.favourites.preview .favourites-wrap {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: unset;
+      margin: 0;
+      overflow-x: scroll;
+    }
+    .user.user-page-unscoped .overview .desktop.favourites.preview .favourites-wrap a {
+      margin: 0;
+    }
+    .user.user-page-unscoped .overview .desktop.favourites.preview .favourites-wrap a:last-of-type {
+      margin-right: 15px;
+    }
+    .user.user-page-unscoped .overview .desktop.favourites.preview .favourites-wrap.studios {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .user.user-page-unscoped .overview .desktop.favourites.preview .favourites-wrap.studios a {
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin-bottom: 6px;
+    }
+    .user.user-page-unscoped .overview > .section:nth-of-type(2) .stats-wrap {
+      display: none;
     }
   }
   /* Coloured Text */
@@ -584,20 +686,6 @@
     color: rgb(var(--color-gray-800));
   }
   /* ------ Database Tools ------ */
-  /* Enable edit button on mobile */
-  @media screen and (max-width: 760px) {
-    .media.media-page-unscoped .sidebar {
-      display: grid;
-      gap: 20px;
-    }
-    .media.media-page-unscoped .sidebar .review.button.edit {
-      grid-row: 1;
-      display: flex;
-    }
-    .media.media-page-unscoped .sidebar .review.button.edit span::after {
-      content: ' Database Entry';
-    }
-  }
   .media.container {
     /* General form inputs */
     /* Character page */
