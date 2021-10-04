@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.6.5
+@version      1.7.0
 @license      MIT
 @preprocessor less
 ==/UserStyle== */
@@ -112,14 +112,154 @@
 		filter: grayscale(50%);
 	}
 
-	/* Small screens adjustment */
+	/* Mobile and small screens adjustments */
 	.page-content > .container,
 	.page-content > .user > .container {
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 760px) {
 			padding-left: 2px;
 			padding-right: 2px;
 		}
 	}
+	/* Increase font size */
+	@media screen and (max-width: 760px) {
+		html {
+			font-size: 11px;
+		}
+	}
+
+	/* Enable edit button and tags on mobile */
+	@media screen and (max-width: 760px) {
+		.media.media-page-unscoped .sidebar {
+			display: grid;
+			gap: 20px;
+
+			margin-bottom: 20px;
+
+			.review.button.edit {
+				grid-row: 1;
+
+				display: flex;
+
+				span::after {
+					content: ' Database Entry';
+				}
+			}
+
+			.data {
+				margin-bottom: 0;
+			}
+
+			.tags {
+				grid-row: 3;
+				grid-column: 1;
+
+				margin-top: 0;
+
+				display: flex;
+				flex-direction: column;
+			}
+
+			.rankings {
+				grid-row: 4;
+				grid-column: 1;
+
+				display: grid;
+				gap: 10px;
+
+				.ranking {
+					margin-bottom: 0;
+
+					&.rated {
+						grid-column: 1;
+					}
+					&.popular {
+						grid-column: 2;
+					}
+				}
+			}
+
+			.external-links {
+				grid-row: 5;
+				grid-column: 1;
+
+				display: flex;
+				flex-direction: column;
+				margin-top: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.media.media-page-unscoped .sidebar .rankings .ranking {
+			&.rated {
+				grid-column: 1;
+				grid-row: 1;
+			}
+			&.popular {
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+	}
+
+	/* Profile page mobile edits */
+	@media screen and (max-width: 760px) {
+		.user.user-page-unscoped {
+			.overview .section .about {
+				padding: 10px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1040px) {
+		.tooltip {
+			display: none !important;
+		}
+		.user.user-page-unscoped {
+			.overview {
+				.desktop {
+					display: grid;
+
+					&.favourites.preview .favourites-wrap {
+						display: grid;
+						grid-auto-flow: column;
+						justify-content: unset;
+
+						margin: 0;
+
+						overflow-x: scroll;
+
+						a {
+							margin: 0;
+
+							&:last-of-type {
+								margin-right: 15px;
+							}
+						}
+					}
+
+					&.favourites.preview .favourites-wrap.studios {
+						display: flex;
+
+						flex-wrap: nowrap;
+
+						a {
+							flex-grow: 1;
+							flex-shrink: 0;
+
+							margin-bottom: 6px;
+						}
+					}
+				}
+			}
+			.overview > .section:nth-of-type(2) {
+				.stats-wrap {
+					display: none;
+				}
+			}
+		}
+	}
+
 	/* Coloured Text */
 	.name[data-v-5e514b1e] {
 		color: rgb(var(--color-blue));
@@ -602,24 +742,6 @@
 	}
 
 	/* ------ Database Tools ------ */
-	/* Enable edit button on mobile */
-	@media screen and (max-width: 760px) {
-		.media.media-page-unscoped .sidebar {
-			display: grid;
-			gap: 20px;
-
-			.review.button.edit {
-				grid-row: 1;
-
-				display: flex;
-
-				span::after {
-					content: ' Database Entry';
-				}
-			}
-		}
-	}
-
 	.media.container {
 		@media screen and (max-width: 800px) {
 			grid-template-columns: auto;
