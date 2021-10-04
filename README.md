@@ -77,3 +77,4 @@ If any of these issues are really annoying to you, message me on my profile http
 
 1.7.0 - Added content previously hidden on small screens. You can now get tags and streaming links on media pages and on profiles you can now see favourites and activity history. <br>
 1.7.1 - Fixes to improve compatibility with automail <br>
+1.7.2 - fixes width of streaming links <br>
