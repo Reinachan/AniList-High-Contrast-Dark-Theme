@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
 @supportURL   https://anilist.co/user/Reina/
 @updateURL    https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css
-@version      1.7.0
+@version      1.7.1
 @license      MIT
 @preprocessor less
 ==/UserStyle== */
@@ -135,13 +135,24 @@
 
 			margin-bottom: 20px;
 
-			.review.button.edit {
+			> * {
+				grid-column: span 2;
+			}
+
+			.review.button {
 				grid-row: 1;
+				grid-column: 2;
+				width: 100%;
+				height: 40px;
+				margin: 0;
 
 				display: flex;
+				&.edit {
+					grid-column: 1;
 
-				span::after {
-					content: ' Database Entry';
+					span::after {
+						content: ' Database Entry';
+					}
 				}
 			}
 
@@ -151,7 +162,6 @@
 
 			.tags {
 				grid-row: 3;
-				grid-column: 1;
 
 				margin-top: 0;
 
@@ -161,7 +171,6 @@
 
 			.rankings {
 				grid-row: 4;
-				grid-column: 1;
 
 				display: grid;
 				gap: 10px;
@@ -224,6 +233,7 @@
 						display: grid;
 						grid-auto-flow: column;
 						justify-content: unset;
+						width: unset;
 
 						margin: 0;
 
@@ -231,6 +241,7 @@
 
 						a {
 							margin: 0;
+							margin-bottom: 10px;
 
 							&:last-of-type {
 								margin-right: 15px;
