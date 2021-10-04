@@ -20,7 +20,7 @@ If you don't want to use a browser that supports extensions, you'll have to use 
 
 ### iOS 15+
 
-Install [Hyperweb](https://apps.apple.com/us/app/hyperweb/id1581824571) extension for Safari. This plugin will let you add userstyles and userscripts. I'll update this when a new and better extension comes out. Once you've installed Hyperweb and enabled it, you can open the installed app and add the userstyle in the userstyle section. Just copy the url of either of these and paste it in. [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme)
+Install [Hyperweb](https://apps.apple.com/us/app/hyperweb/id1581824571) extension for Safari (I'll update this later when a better extension comes out. This one works for now). Once you've installed Hyperweb and enabled it, you can open the installed app and add the userstyle in the userstyles section. Just copy the url of either of these and paste it in. [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme)
 
 If you're on an older version of iOS, you'll have to follow the alternative method below.
 
