@@ -75,4 +75,5 @@ If any of these issues are really annoying to you, message me on my profile http
 1.6.4 - Changed the colour when hovering over a liked heart. It becoming blue when hovering previous was a bit confusing, especially as it stayed blue when clicking like in the first place. <br>
 1.6.5 - Added the stuff I forgot in the previous version making it actually work. <br>
 
-1.7.0 - Added content previously hidden on small screens. You can now get tags and streaming links on media pages and on profiles you can now see favourites and activity history.
+1.7.0 - Added content previously hidden on small screens. You can now get tags and streaming links on media pages and on profiles you can now see favourites and activity history. <br>
+1.7.1 - Fixes to improve compatibility with automail <br>
