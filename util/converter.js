@@ -1,48 +1,18 @@
 const fs = require('fs');
 
-const themeLess = fs.readFileSync('gen/theme.css', 'utf8');
+const themeCSS = fs.readFileSync('gen/theme.css', 'utf8');
+const metadata = fs.readFileSync('style/userscript_metadata.css', 'utf8');
 
-const styleString = `
-function addStyleString(str) {
-  const node = document.createElement('style');
-  node.innerHTML = str;
-
-  document.body.appendChild(node);
-}
-
-addStyleString(
-`;
-
-const functionEnd = ');';
-
-const convertToJs = (file) => {
-	let converted = file;
-
-	// Remove stuff not needed on mobile to make it shorter
-	converted = converted.replace(
+const removeMozDocument = (file) => {
+	// Removes @moz-document
+	return file.replace(
 		/\/\* no-mobile-start \*\/[\s\S]+?\/\* no-mobile-end \*\//g,
 		''
 	);
-	converted = converted + ':root {font-size:12px;}';
+};
 
-	// Remove comments
-	converted = converted.replace(/\/\*(.|n)*?\*\//gs, '');
-	converted = converted.replace(/(?<!:)\/\/.+/g, '');
-	// Remove the submission manual
-	converted = converted.replace(
-		/@-moz-document domain\("submission-manual\.anilist\.co"\)[\s\S]+$/g,
-		''
-	);
-	// Remove the moz-document
-	/* converted = converted.replace(
-		/@-moz-document domain\("anilist\.co"\) {[\s\S]+?(?<! )}/g,
-		'$1'
-	); */
-	// Convert " to '
-	converted = converted.replace(/"/g, "'");
-
-	const start = styleString.replace(/\n/g, ' ') + '`';
-	return start + converted + '`' + functionEnd;
+const convertToUserscriptExtension = (css, meta) => {
+	return meta + removeMozDocument(css);
 };
 
 const bookmarkletStart = 'javascript:(function () {';
@@ -65,7 +35,7 @@ const bookmarlet = (jsScript) => {
 };
 
 fs.writeFileSync(
-	'High-Contrast-Dark-Theme.bookmarklet.js',
-	bookmarlet(convertToJs(themeLess)),
+	'High-Contrast-Dark-Theme-Userscript.user.css',
+	bookmarlet(convertToUserscriptExtension(themeCSS, metadata)),
 	'utf8'
 );

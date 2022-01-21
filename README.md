@@ -8,25 +8,25 @@ Major overhaul to the default dark-theme on AniList to improve accessibility for
 
 ### Computer
 
-You'll need Stylus on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) or [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
-
-Add the userstyle via [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme)
+you can install it via [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme) — with Stylus on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) or [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
 ### Android
 
-You'll need a browser that supports plugins. [Kiwi Browser](https://kiwibrowser.com/) and [Yandex Browser](https://browser.yandex.com/mobile/) both support Chrome plugins. Other browsers might support these plugins in the future or currently. I'm not an Android user, so open an issue or make a PR if this information is out of date. Add the [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) extension to that browser and add the userstyle via [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme)
+Add it through the same method as above, just use a browser that supports extensions. [Kiwi Browser](https://kiwibrowser.com/) and [Yandex Browser](https://browser.yandex.com/mobile/) both support Chrome extensions. Other browsers might support these extensions in the future or currently. I'm not an Android user, so open an issue or make a PR if this information is out of date.
 
-If you don't want to use a browser that supports extensions, you'll have to use the alternative method below.
+### iOS/iPadOS/Alternative method for MacOS
 
-### iOS 15+
+You have to use Safari on iOS/iPadOS 15+ for this method.
 
-Install [Hyperweb](https://apps.apple.com/us/app/hyperweb/id1581824571) extension for Safari (I'll update this later when a better extension comes out. This one works for now). Once you've installed Hyperweb and enabled it, you can open the installed app and add the userstyle in the userstyles section. Just copy the url of either of these and paste it in. [UserStyles.world](https://userstyles.world/style/227/anilist-high-contrast-dark-theme), directly from [GitHub](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme.user.css), or from [GreasyFork](https://greasyfork.org/en/scripts/416013-anilist-high-contrast-dark-theme)
+Install [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) extension. This one is blazing fast and privacy-respecting. Open the app you've installed and set a directory for the extension to read from. I recommend storing it on a cloud service so you can easily sync it between different devices. Putting it on a cloud service also allow you to easily add the style from a computer.
 
-If you're on an older version of iOS, you'll have to follow the alternative method below.
+#### Install from your iOS device
 
-### Alternative Method
+Add this [Shortcut](https://www.icloud.com/shortcuts/5f401f8a91b4400caa6237ec2b1534c6) which allows you to download files from a url and choose the file extension. Hold on [this](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme-Userscript.user.css) link and choose "Share". Scroll until you find Download File and tap that one. Save to the directory you chose in the previous part and when it prompts you, replace `.txt` with `.css`.
 
-You can add it as a bookmarklet by making a bookmark with the content of [this](https://raw.githubusercontent.com/Reinachan/AniList-High-Contrast-Dark-Theme/main/High-Contrast-Dark-Theme.bookmarklet.js) file as the URL. You'll have to apply this every time you open or reload AniList for it to work. Sadly, for security reasons, I can't have this one auto-update. This means you'll have to update it manually as I add new features. I occasionally announce updates over on [AniList](https://anilist.co/user/Reina/) in case you don't use GitHub actively.
+#### Install from a computer
+
+Download the file from [here](https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme-Userscript.user.css) and place it in the folder in the cloud service you picked as your directory for Userscripts.
 
 ## Screenshots
 
@@ -78,3 +78,5 @@ If any of these issues are really annoying to you, message me on my profile http
 1.7.0 - Added content previously hidden on small screens. You can now get tags and streaming links on media pages and on profiles you can now see favourites and activity history. <br>
 1.7.1 - Fixes to improve compatibility with automail <br>
 1.7.2 - fixes width of streaming links <br>
+
+1.8.0 - Changed the GitHub Action to use a new extension, Userscripts, for iOS that is significantly faster and privacy-respecting than Hyperweb. Removed the now unecessary submission manual stuff as AniList moved that to a different service. Deprecated the old bookmarklet method (the file will remain but the install instructions have been removed). <br>
