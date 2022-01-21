@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name         AniList High-Contrast Dark-Theme
 @description  Adjusts the dark-theme to have higher contrast and some other tweaks.
-@includes     https://anilist.co/*
-@includes     https://anichart.net/*
+@match        https://anilist.co/*
+@match        https://anichart.net/*
 @weight       999
 @author       Reina
 @namespace    https://github.com/Reinachan
