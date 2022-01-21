@@ -403,7 +403,6 @@
     border-top-color: rgb(var(--color-foreground-grey-dark)) !important;
   }
   /* hoh styling */
-  /* no-mobile-start */
   #hohSettings .hohCategories {
     display: flex;
     flex-wrap: wrap;
@@ -540,7 +539,6 @@
     border-radius: 4px;
     margin-right: 0 !important;
   }
-  /* no-mobile-end */
   /* Like heart */
   .action.likes .button,
   .like-wrap.thread_comment .button {
@@ -776,127 +774,5 @@
     width: 100%;
   }
   /* no-mobile-start */
-}
-@-moz-document domain("submission-manual.anilist.co") {
-  /* Colors */
-  :root {
-    --color-background: 14, 18, 22;
-    --color-blue: 120, 180, 255;
-    --color-shadow-blue: 0, 0, 0;
-    --color-foreground: 20, 25, 31;
-    --color-foreground-alt: 18, 23, 29;
-    --color-foreground-blue: 26, 33, 45;
-    --color-foreground-grey: 15, 22, 28;
-    --color-foreground-grey-dark: 6, 12, 13;
-    --color-text: 240, 240, 240;
-    --color-text-light: 220, 230, 240;
-    --color-text-lighter: 230, 230, 240;
-    --color-text-bright: 255, 255, 255;
-    scrollbar-color: rgb(var(--color-blue)) rgb(var(--color-background));
-    scrollbar-width: auto;
-  }
-  /* Base */
-  #nav {
-    background: rgb(var(--color-foreground));
-  }
-  body {
-    background-color: rgb(var(--color-background));
-    color: rgb(var(--color-text-lighter));
-  }
-  a,
-  p a code {
-    color: rgb(var(--color-blue));
-  }
-  blockquote {
-    color: rgb(var(--color-text-light));
-  }
-  /* Top navbar */
-  .navbar {
-    background-color: rgb(var(--color-foreground));
-    border-bottom: none;
-  }
-  .navbar .site-name {
-    color: rgb(var(--color-text-light));
-  }
-  .navbar .links {
-    background-color: rgb(var(--color-foreground));
-  }
-  .navbar .search-box input {
-    background-color: rgb(var(--color-background));
-    color: rgb(var(--color-text-light));
-    border-color: rgb(var(--color-background));
-    border-width: 2px;
-  }
-  /* Sidebar */
-  .sidebar {
-    background-color: rgb(var(--color-foreground-alt));
-    color: rgb(var(--color-text-light));
-  }
-  .sidebar a.sidebar-link {
-    color: rgb(var(--color-text-lighter));
-  }
-  .sidebar a.sidebar-link.active {
-    color: rgb(var(--color-blue));
-  }
-  /* Warning / Tip / Danger boxes */
-  .custom-block.warning {
-    color: rgb(var(--color-text-light));
-  }
-  .custom-block.warning a {
-    color: rgb(var(--color-blue));
-  }
-  .custom-block.warning .custom-block-title,
-  .custom-block.danger .custom-block-title {
-    color: rgb(var(--color-text-bright));
-  }
-  .custom-block.tip {
-    background-color: #113927;
-  }
-  .custom-block.danger {
-    background-color: #321010;
-    color: #ffe2e2;
-  }
-  /* Tables */
-  td,
-  th {
-    border-color: #888;
-  }
-  tr:nth-child(2n) {
-    background-color: rgb(var(--color-foreground-grey));
-  }
-  .icon.outbound {
-    color: rgb(var(--color-text));
-  }
-  /* Tab components */
-  .tabs-component-panels {
-    background-color: rgb(var(--color-foreground-blue));
-    border-color: rgb(var(--color-foreground));
-  }
-  .tabs-component-tab {
-    background-color: rgb(var(--color-foreground-alt));
-    border-color: #0000;
-    color: #ccc;
-  }
-  .tabs-component-tab:focus-visible,
-  .tabs-component-tab:focus,
-  .tabs-component-tab a:focus-visible,
-  .tabs-component-tab a:focus {
-    outline: none;
-  }
-  .tabs-component-tab.is-active {
-    background-color: rgb(var(--color-foreground-blue));
-    color: #fff;
-    transform: none;
-  }
-  .tabs-component-tab.is-active:hover a {
-    cursor: default;
-    text-decoration: none;
-  }
-  .tabs-component-tab:hover:not(.is-active) {
-    color: white;
-  }
-  .tabs-component-tab:hover:not(.is-active) a {
-    text-decoration: none;
-  }
 }
 /* no-mobile-end */
