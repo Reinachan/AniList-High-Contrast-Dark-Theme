@@ -19,7 +19,7 @@ if (typeof GM_addStyle === 'function'){
 	const style = document.createElement('style');
 	style.type = 'text/css';
 	style.textContent = css;
-	document.head.appendChild(style);
+	document.body.appendChild(style);
 }
 `;
 };
