@@ -1,6 +1,20 @@
-/* no-mobile-start */
-@-moz-document domain("anilist.co"), domain("anichart.net") {
-  /* no-mobile-end */
+// ==UserScript==
+// @name         AniList High-Contrast Dark-Theme
+// @description  Adjusts the dark-theme to have higher contrast and some other tweaks.
+// @match        https://anilist.co/*
+// @match        https://anichart.net/*
+// @author       Reina
+// @namespace    https://github.com/Reinachan
+// @homepageURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme
+// @supportURL   https://anilist.co/user/Reina/
+// @downloadURL  https://github.com/Reinachan/AniList-High-Contrast-Dark-Theme/raw/main/High-Contrast-Dark-Theme-Userscript.user.js
+// @version      1.8.0
+// @license      MIT
+// @grant        GM_addStyle
+// @weight       900
+// ==/UserScript==
+const css = `
+
   :root {
     --color-background: 14, 18, 22;
     --color-blue: 120, 180, 255;
@@ -761,6 +775,13 @@
   .media.container .images .submission-form .cover.banner {
     width: 100%;
   }
-  /* no-mobile-start */
+  
+`;
+if (typeof GM_addStyle === 'function'){
+	GM_addStyle(css);
+} else {
+	const style = document.createElement('style');
+	style.type = 'text/css';
+	style.textContent = css;
+	document.body.appendChild(style);
 }
-/* no-mobile-end */
