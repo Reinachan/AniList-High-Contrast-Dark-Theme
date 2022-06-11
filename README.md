@@ -80,3 +80,5 @@ If any of these issues are really annoying to you, message me on my profile http
 1.7.2 - fixes width of streaming links <br>
 
 1.8.0 - Changed the GitHub Action to use a new extension, Userscripts, for iOS that is significantly faster and privacy-respecting than Hyperweb. Removed the now unecessary submission manual stuff as AniList moved that to a different service. Deprecated the old bookmarklet method (the file will remain but the install instructions have been removed). <br>
+
+1.9.0 - Merged PRs by @kazzarin removing duplicate tag section on media pages as AniList added those in themselves. The other one switches to a userscript as an alternative method of injecting the style rather than the previous alternate userstyle. <br>
