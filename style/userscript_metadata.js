@@ -11,4 +11,5 @@
 // @version      1.8.0
 // @license      MIT
 // @grant        GM_addStyle
+// @weight       900
 // ==/UserScript==
